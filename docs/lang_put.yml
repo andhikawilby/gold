@@ -1,0 +1,25 @@
+tags:
+  - name: init 
+get:
+  description: init
+parameters:
+  - name: id
+    in: path
+    required: true
+    type: string
+  - name: old
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        name: 
+          type: string
+responses:
+    '200':
+      description: Successful response
+    '400':
+      description: Bad Request
+    '500':
+      description: Internal Server Error
+    
